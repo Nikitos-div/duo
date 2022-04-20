@@ -1,0 +1,27 @@
+{
+  "name": "duo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikitos-div/duo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikitos-div/duo/issues"
+  },
+  "homepage": "https://github.com/Nikitos-div/duo#readme",
+  "dependencies": {
+    "konva": "^8.3.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
