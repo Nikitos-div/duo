@@ -3,7 +3,7 @@ import { Layer, LayerConfig } from 'konva/lib/Layer';
 import Shape from './Shapes/Shape'
 import { Stage } from 'konva/lib/Stage'
 import { ShapeConfigFacade } from '../types';
-
+import { v4  } from 'uuid';
 
 interface EngineConfig {
     container: string;
@@ -21,10 +21,10 @@ class Engine {
     }
     createShape(shapeName: string, shapeConfig: ShapeConfigFacade) {
         const shape = new Shape(shapeName, shapeConfig)
-        // id 
+        const uuid = v4()
         // add to store 
         // add to layer 
-        
+
     }
 }
 
