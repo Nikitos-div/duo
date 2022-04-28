@@ -21,16 +21,17 @@ class Store {
         this._store[uuid] = shape
     }
     
-    getElementById() {
-        // soon
+    getElementById(uuid: string): Shape {
+        return this._store[uuid]
     }
 
     updateElementById() {
         // soon
     }
     
-    deleteElementById() {
+    deleteElementById(uuid: string): void {
         // soon
+        delete this._store[uuid]
     }
 }
 
