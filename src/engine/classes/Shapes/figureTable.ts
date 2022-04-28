@@ -6,7 +6,7 @@ interface FigureTable {
 }
 
 const figureTable: FigureTable = {
-    Rect: <T>(config: T) => new Konva.Rect(config)
+    Rect: (config) => new Konva.Rect(config)
 };
 
 export default figureTable
