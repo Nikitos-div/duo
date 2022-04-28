@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc --w"
+    "compile": "tsc --w",
+    "build": "webpack --config webpack.prod.config.js",
+    "start": "webpack-dev-server --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,35 @@
   },
   "homepage": "https://github.com/Nikitos-div/duo#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "github:pmmmwh/react-refresh-webpack-plugin",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
     "@types/uuid": "^8.3.4",
-    "typescript": "^4.6.3"
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.4",
+    "react-refresh": "^0.13.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.2.9",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
     "konva": "^8.3.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "uuid": "^8.3.2"
   }
 }
