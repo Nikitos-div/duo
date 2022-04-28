@@ -1,6 +1,6 @@
 import Konva from 'konva'
 
-import Engine from './classes/Engine'
+import Engine from './engine/classes/Engine'
 
 
 
