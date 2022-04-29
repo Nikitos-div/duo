@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc --w"
+    "compile": "tsc --w",
+    "build": "webpack",
+    "dev": "webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,23 @@
   },
   "homepage": "https://github.com/Nikitos-div/duo#readme",
   "devDependencies": {
+    "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11",
     "@types/uuid": "^8.3.4",
-    "typescript": "^4.6.3"
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "type-fest": "^2.5.4",
+    "typescript": "^4.6.3",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
     "konva": "^8.3.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "uuid": "^8.3.2"
   }
 }
