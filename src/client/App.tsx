@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
     return (
         <div> 
-            Эта хуета работает
+           this is working!
         </div>
     )
 }

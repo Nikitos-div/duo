@@ -44,7 +44,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin(
         {
-            title: 'бля',
+            title: 'Duo',
             template: './public/index.html',
         }
     )],
