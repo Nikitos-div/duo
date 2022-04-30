@@ -8,7 +8,7 @@ interface DefaultLayoutProps {
 const Layout = ({children}: DefaultLayoutProps) => {
 
     return (
-        <main>
+        <main className="layout">
            {children}
         </main>
     )
