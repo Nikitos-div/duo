@@ -7,7 +7,7 @@ const useInitEngine = (ref: RefObject<HTMLDivElement>): Engine => {
 
     useEffect(()=> {
         if (ref.current !== null) {       
-            const engine = new Engine({width: 500, height: 500, container: ref.current })
+            const engine = new Engine({width: window.innerWidth, height: window.innerHeight, container: ref.current })
             setEngine(engine)   
         }
     }, [ref])
