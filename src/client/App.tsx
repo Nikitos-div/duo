@@ -1,10 +1,13 @@
 import React from 'react'
-
+import Layout  from './layout/default'
+import MainPage from './modules/main/main'
 const App = () => {
     return (
-        <div> 
-           this is working!
-        </div>
+        <> 
+            <Layout>
+               <MainPage/>
+            </Layout>
+        </>
     )
 }
 
