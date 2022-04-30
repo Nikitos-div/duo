@@ -1,10 +1,11 @@
 import Konva from 'konva'
 import { Layer, LayerConfig } from 'konva/lib/Layer';
-import Shape from './Shapes/Shape'
+import Shapes from './Shapes/index'
 import { Stage } from 'konva/lib/Stage'
-import { ShapeConfigFacade } from '../types';
+
 import { v4  } from 'uuid';
 import Store from '../store';
+
 
 interface EngineConfig {
     container: string;
@@ -22,8 +23,8 @@ class Engine {
         this.stage.add(this.layer)
         this.store = new Store()
     }
-    createShape(shapeName: string, shapeConfig: ShapeConfigFacade) {
-        const shape = new Shape(shapeName, shapeConfig)
+    createShape(shapeName: string, config: unknown) {
+        const shape = Shapes[shapeName](config)
         const uuid = v4()
         this.layer.add(shape.shape)
         this.store.add({uuid, shape})

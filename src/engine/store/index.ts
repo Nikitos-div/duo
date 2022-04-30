@@ -1,17 +1,18 @@
-import Shape from "../classes/Shapes/Shape"
 
+
+type TODO = any
 interface Element { 
     uuid: string;
-    shape: Shape
+    shape: unknown
 }
 
 
 interface Storage {
-    [field: string]: Shape
+    [field: string]: TODO
 }
 class Store {
     private _data: {} = {}
-    private _handlers: any = {}
+    private _handlers: TODO = {}
     private _store : Storage;
     constructor() {
         const proxyObject = new Proxy(this._data, this._handlers)
@@ -21,11 +22,11 @@ class Store {
         this._store[uuid] = shape
     }
     
-    getElementById(uuid: string): Shape {
+    getElementById(uuid: string): TODO {
         return this._store[uuid]
     }
 
-    updateElementById() {
+    updateElementById(id: string) {
         // soon
     }
     

@@ -1,6 +1,11 @@
+// import { Circle, CircleConfig } from 'konva/lib/shapes/Circle';
+import { Circle } from 'konva/lib/shapes/Circle';
 import { Rect, RectConfig } from 'konva/lib/shapes/Rect'
 
 
 
-export interface ShapeFacade extends Rect {}
-export interface ShapeConfigFacade extends RectConfig {}
+
+
+
+export interface RectWrapper extends Rect {}
+export interface CircleWrapper extends Circle {}
