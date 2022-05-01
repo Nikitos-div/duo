@@ -1,6 +1,6 @@
-import ControllersContainer from '../../../components/Controllers/Container'
+import ControllersContainer from '../../../components/Container/Container'
 import React from 'react'
-
+import Controller from '../../../components/Controller/Controller'
 
 
 interface ContainerWrapperProps {
@@ -10,12 +10,18 @@ interface ContainerWrapperProps {
 
 const ContainerWrapper = ({createHandler}: ContainerWrapperProps) => {
     
-    console.log(createHandler)
+    
     return (
         <ControllersContainer position='absolute' styles={{
             left: 10,
             top: '40%',
         }}>
+            <Controller>
+                1
+            </Controller> 
+            <Controller>
+                2
+            </Controller> 
             
 
         </ControllersContainer>
