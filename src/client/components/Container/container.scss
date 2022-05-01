@@ -8,6 +8,9 @@
     max-height: 400px;
     min-width: 40px;
     max-width: 40px;
+    &  > button {
+        margin-top: 4px;
+    }
 }
 
 .position {

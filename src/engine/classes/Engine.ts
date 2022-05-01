@@ -27,6 +27,7 @@ class Engine {
         const shape = Shapes[shapeName](config)
         const uuid = v4()
         this.layer.add(shape.shape)
+        console.log(shape)
         this.store.add({uuid, shape})
     }
 }

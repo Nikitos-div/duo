@@ -13,7 +13,7 @@ const Canvas = () => {
     return (
         <div className='canvas-container'>
            <div ref={reference} id='container'></div>
-           {engine && <ContainerWrapper createHandler={engine.createShape.bind(engine)}/>}
+           {engine && <ContainerWrapper create={engine.createShape.bind(engine)}/>}
         </div>
     )
 }
