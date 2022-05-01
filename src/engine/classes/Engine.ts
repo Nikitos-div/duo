@@ -8,7 +8,7 @@ import Store from '../store';
 
 
 interface EngineConfig {
-    container: string;
+    container: string | HTMLDivElement;
     width: number | undefined;
     height: number | undefined;
 }

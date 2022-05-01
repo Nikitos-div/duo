@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     entry: './src/client/index.tsx', // точка входа, о которой говорилось ранее.
     mode: 'development',
@@ -15,15 +16,19 @@ module.exports = {
                     },
                   ],
               },
-        
-            {
-                test: /\.css$/, // сопоставляет только файлы .css (т.е. не .scss и др.)
-                use: ['style-loader', 'css-loader'], 
-            },
+              // {
+              //   test: /\.s[ac]ss$/, // сопоставляет только файлы .css (т.е. не .scss и др.)
+              //   use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'], 
+              //  },
+               
+              {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+              },
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+      extensions: [".wasm", ".ts", ".tsx", ".mjs", ".cjs", ".js", ".json"],
     },
     output: {
         filename: 'bundle.js', // выходной бандл
@@ -49,5 +54,5 @@ module.exports = {
         }
     )],
 
-    devtool: 'eval-source-map', // создает высококачественные карты кода
+    // devtool: 'eval-source-map', // создает высококачественные карты кода
 }
