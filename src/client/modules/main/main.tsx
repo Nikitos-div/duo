@@ -1,11 +1,12 @@
 import React from 'react'
-import Canvas from './components/canvas'
+import Canvas from './components/Canvas'
+
 import './styles.scss'
 
 const main = () => {
     return (
         <div>
-          <Canvas></Canvas>
+          <Canvas></Canvas>  
         </div>
     )
 }

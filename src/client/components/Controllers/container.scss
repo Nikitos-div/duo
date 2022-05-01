@@ -1,0 +1,17 @@
+.controllers-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 6px; 
+    box-shadow: 14px 14px 44px -11px rgba(34, 60, 80, 0.2);
+    min-height: 300px;
+    max-height: 400px;
+    min-width: 40px;
+    max-width: 40px;
+}
+
+.position {
+    &_absolute {
+        position: absolute
+    }
+}
