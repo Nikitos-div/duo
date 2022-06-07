@@ -1,4 +1,4 @@
-import Engine from './classes/Engine'
+import Engine from './main/Engine'
 
 
 

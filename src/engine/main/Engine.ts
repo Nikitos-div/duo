@@ -8,9 +8,9 @@ import Store from '../store';
 import { Transform } from 'konva/lib/Util';
 
 
-const initStageEvents = (stage: Stage): void => {
+// const initStageEvents = (stage: Stage): void => {
    
-}
+// }
 
 
 
@@ -43,6 +43,7 @@ class Engine {
         this.stage = new Konva.Stage(config)
         this.layer = new Konva.Layer(layerConfig)
         const transformer = createTransformer()
+        // @ts-ignore  tech debt
         this.layer.add(transformer)
         this.stage.add(this.layer)
         this.store = new Store()
@@ -51,7 +52,7 @@ class Engine {
         const selectionRectangle = createSelectionRectangle()
         
         this.layer.add(selectionRectangle)
-        initStageEvents(this.stage)
+        Engine.initStageEvents(this.stage)
         
         
     }
@@ -61,6 +62,9 @@ class Engine {
         this.layer.add(shape.shape)
         console.log(shape)
         this.store.add({uuid, shape})
+    }
+    static initStageEvents(stage: Stage) {
+
     }
 }
 
